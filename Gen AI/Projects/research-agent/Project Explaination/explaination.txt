@@ -1,0 +1,21 @@
+### Research Agent – Project Explanation
+
+I have been working on an AI-powered Research Agent designed to help users perform research using natural language queries.
+
+The main objective of this project is to build something more capable than a traditional chatbot. A normal chatbot generally receives a question and generates a response, whereas my research agent can determine what actions are required, retrieve information from documents, and use external tools to complete a task.
+
+From an architectural perspective, I have divided the application into multiple layers.
+
+For the frontend, I am using Streamlit, while FastAPI handles backend API communication and Pydantic is used for request validation.
+
+The core of the application is built using LangGraph. I chose LangGraph because I wanted more control over the agent's execution rather than relying on a simple linear chain. I use StateGraph to define the workflow, nodes to represent individual operations, and edges and conditional edges to control execution.
+
+For the agent's reasoning approach, I use the ReAct pattern, which combines reasoning and tool execution. The agent can work with tools such as web search and a calculator. I have also implemented safety checks for calculator expressions using Python's AST module instead of blindly executing arbitrary expressions.
+
+Another important component is Retrieval-Augmented Generation. I use LangChain for document processing, HuggingFace embeddings to convert document chunks into vectors, and ChromaDB as the vector store. When a user asks a question related to uploaded documents, the system retrieves relevant information and provides it to the LLM as context before generating the response.
+
+For LLM integration, I use Groq through LangChain. I have also been working on state management, checkpointing, and memory so that the agent can maintain information across its execution and conversations.
+
+One of the important engineering considerations in this project is controlling how the agent executes. An agent should not keep calling tools indefinitely or execute unsafe operations. Therefore, I focus on controlled tool execution, state management, validation, and predictable workflow transitions.
+
+Overall, this project has helped me understand how to combine LLMs, RAG, external tools, and graph-based orchestration to build a more structured AI application rather than just a basic chatbot.

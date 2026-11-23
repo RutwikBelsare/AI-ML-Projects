@@ -1,0 +1,56 @@
+
+# Python virtual environments
+.venv/
+.venv-*/
+venv/
+**/.venv/
+**/.venv-*/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.python-version
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Vector databases
+chroma/
+**/chroma/
+data/chroma/
+**/data/chroma/
+
+# Fashion recommender - large local dataset
+/Machine Learning/Projects/Fashion Recomender System/fashion-dataset/
+
+# Generated logs
+*.log
+s
+
+# Generated vector database and indexes
+**/chroma_db/
+**/faiss_index/
+**/cred.txt
+
+# Local application databases
+**/*.sqlite
+**/*.sqlite3
+
+# Generated datasets
+**/datasets/

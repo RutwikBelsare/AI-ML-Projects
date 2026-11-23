@@ -1,0 +1,23 @@
+
+LangGraph Research Notes
+
+LangChain provides components for building applications
+powered by language models. These include chat models,
+prompts, tools, document loaders, retrievers, and vector stores.
+
+LangGraph is a framework for orchestrating stateful,
+multi-step applications. A StateGraph defines a workflow
+using nodes and edges.
+
+Nodes perform operations. Edges determine how execution
+moves between nodes. Conditional edges choose the next node
+based on the current state.
+
+RAG stands for Retrieval-Augmented Generation. It retrieves
+relevant information from an external knowledge source and
+provides that information to a language model when generating
+an answer.
+
+An embedding model converts text into numerical vectors.
+A vector store stores and searches these vectors. A retriever
+returns documents relevant to a query.

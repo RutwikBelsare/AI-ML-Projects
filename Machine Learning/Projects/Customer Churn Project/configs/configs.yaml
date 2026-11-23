@@ -1,0 +1,15 @@
+project:
+  name: customer-churn-ml
+  version: "1.0.0"
+
+data:
+  raw_path: data/raw/Telco-Customer-Churn.csv
+  target_column: Churn
+
+training:
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+
+model:
+  artifact_path: models/churn_pipeline.joblib

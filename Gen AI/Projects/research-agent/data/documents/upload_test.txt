@@ -1,0 +1,6 @@
+LangGraph is a framework for building stateful,
+multi-step applications using language models.
+
+A StateGraph defines the structure of a workflow.
+Nodes perform operations and edges determine
+the execution flow between nodes.

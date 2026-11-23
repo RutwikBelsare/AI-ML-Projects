@@ -1,0 +1,10 @@
+services:
+  churn-platform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: customer-churn-platform
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    restart: unless-stopped
